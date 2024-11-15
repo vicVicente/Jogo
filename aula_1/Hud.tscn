@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://vida.webp" type="Texture" id=1]
+[ext_resource path="res://script_hud.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "duas_vidas"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 245, 453, 471, 205 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "quatros_vidas"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 245, 453, 951, 205 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "tres_vidas"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 245, 453, 711, 205 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "uma_vida"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 245, 453, 231, 205 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 134, 54 )
+scale = Vector2( 0.14375, 0.142593 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 245, 453, 951, 205 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "quatros_vidas"
+anims/duas_vidas = SubResource( 1 )
+anims/quatros_vidas = SubResource( 2 )
+anims/tres_vidas = SubResource( 3 )
+anims/uma_vida = SubResource( 4 )
