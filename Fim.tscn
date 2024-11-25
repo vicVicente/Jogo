@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ButtonFim.gd" type="Script" id=1]
+[ext_resource path="res://Fim.gd" type="Script" id=2]
+[ext_resource path="res://sprite/assets_space_shooter_2d/assets/font/Kenney Blocks.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="Fim" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -280.0
+margin_top = -112.0
+margin_right = 240.0
+margin_bottom = 50.0
+
+[node name="FimLabel" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -246.0
+margin_top = 4.0
+margin_right = 244.0
+margin_bottom = 77.0
+custom_fonts/font = SubResource( 1 )
+text = "Você Conseguiu!!!"
+align = 1
+valign = 1
+
+[node name="ScoreFimLabel" type="Label" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -101.0
+margin_top = -19.0
+margin_right = 115.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 2 )
+text = "Score: 999"
+
+[node name="Button" type="Button" parent="Panel"]
+anchor_left = 0.526
+anchor_top = 0.864
+anchor_right = 0.526
+anchor_bottom = 0.864
+margin_left = -56.52
+margin_top = -23.968
+margin_right = 37.48
+margin_bottom = 9.032
+text = "Sair"
+script = ExtResource( 1 )
